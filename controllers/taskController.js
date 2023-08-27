@@ -11,9 +11,8 @@ exports.createtask = async (req, res) => {
       }
   };
 exports.getalltasks = async (req, res) => {
-  const {createdBy} = req.body;
     try {
-        const task = await Task.find({createdBy});
+        const task = await Task.find({createdBy : req.params.id});
         res.json(task);
       } catch (error) {
         res.status(500).json({ error: 'Error fetching tasks' });

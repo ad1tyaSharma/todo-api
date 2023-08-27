@@ -35,7 +35,7 @@ app.set('views', path.join(__dirname, 'public')); // Set the directory for your 
 const authRouter = require('./routes/authRoutes');
 const contactRouter = require('./routes/taskRoutes')
 app.use('/auth', authRouter);
-app.use('/contact',contactRouter);
+app.use('/task',contactRouter);
 app.use((req, res, next) => {
     res.status(404).render("404.ejs");
   });
