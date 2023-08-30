@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const path = require('path')
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const allowedOrigins = [process.env.FRONTEND_URL,'http://localhost:3000'];
+const allowedOrigins = [process.env.FRONTEND_URL,'http://localhost:3000','http://localhost:5173'];
 const corsOptions ={
     origin:  allowedOrigins, 
     credentials:true,            //access-control-allow-credentials:true
