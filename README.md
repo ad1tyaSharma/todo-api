@@ -47,6 +47,9 @@ Run the server:
 ```bash 
 npm start
 ```
+Demo User,
+Email : user@test.com
+Password : 123456
 The API will be available at `http://localhost:8000`.
 
 ## API Reference
