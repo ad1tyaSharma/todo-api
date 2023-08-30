@@ -4,14 +4,14 @@ const User = require("../models/User");
 
 exports.register = async (req, res) => {
   //console.log(req.body);
-  const { name, email, password,profilePic } = req.body;
+  const {email, password } = req.body;
   const hashedPwd = await bcrypt.hash(password, 10);
   try {
     const response = await User.create({
-      name,
+      
       email,
       password: hashedPwd,
-      profilePic
+      
     });
     //console.log("User created successfully: ", response);
   } catch (error) {
